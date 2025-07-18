@@ -91,7 +91,16 @@
     pkgs.flameshot
     pkgs.tulip
     pkgs.nix-tree
-    pkgs.osu-lazer-bin
     pkgs.desktop-file-utils
+    pkgs.mattermost
+    pkgs.wineWowPackages.stagingFull
+    pkgs.gearlever
+    pkgs.unrar
+    pkgs.zathura
+    pkgs.nbd
+    pkgs.docker-compose
+    pkgs.pngcheck
+    pkgs.go
+    pkgs.010editor
   ];
 }

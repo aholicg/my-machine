@@ -283,14 +283,14 @@
   };
 
   # Docker
-  #virtualisation.docker.enable = true;
-  #virtualisation.docker.rootless = {
-  #  enable = true;
-  #  setSocketVariable = true;
-  #};
-  #virtualisation.docker.daemon.settings = {
-  #  data-root = "/home/grey/docker/";
-  #};
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+  virtualisation.docker.daemon.settings = {
+    data-root = "/home/grey/docker/";
+  };
 
   # virtualization
   #virtualisation.vmware.host.enable = true;
