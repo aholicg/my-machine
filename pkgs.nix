@@ -101,6 +101,7 @@
     pkgs.docker-compose
     pkgs.pngcheck
     pkgs.go
-    pkgs.010editor
+    pkgs.openvpn
+    pkgs.openssh
   ];
 }

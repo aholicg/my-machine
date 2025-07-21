@@ -165,10 +165,16 @@
   # if cursor becomes transparent
   #WLR_NO_HARDWARE_CURSORS = "1";
   };
-
-  hardware = {
-    graphics.enable = true;
+  
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # For Broadwell (2014) or newer processors. LIBVA_DRIVER_NAME=iHD
+      intel-vaapi-driver # For older processors. LIBVA_DRIVER_NAME=i965
+    ];
   };
+  environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; }; # Optionally, set the environment variable
+  
   # XDG
   xdg.autostart.enable = true;
   xdg.portal.enable = true;
@@ -233,7 +239,7 @@
   powerManagement = {
     enable = true;
     powertop.enable = true;
-    cpuFreqGovernor = "powersave";
+    cpuFreqGovernor = "schedutil";
   };
   services.thermald.enable = true;
   services.power-profiles-daemon.enable = false;
@@ -242,16 +248,17 @@
     enable = true;
     settings = {
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
 
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "schedutil";
       CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
 
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 20;
+      CPU_MAX_PERF_ON_BAT = 30;
       
+      CPU_BOOST_ON_AC=1;
       CPU_BOOST_ON_BAT = 0;
       CPU_HWP_DYN_BOOST_ON_BAT = 0;
 
