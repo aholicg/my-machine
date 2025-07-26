@@ -245,7 +245,7 @@
   services.power-profiles-daemon.enable = false;
 
   services.tlp = {
-    enable = true;
+    enable = false;
     settings = {
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
@@ -256,7 +256,7 @@
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 30;
+      CPU_MAX_PERF_ON_BAT = 50;
       
       CPU_BOOST_ON_AC=1;
       CPU_BOOST_ON_BAT = 0;
@@ -266,7 +266,7 @@
     };
   };
 
-  services.auto-cpufreq.enable = false;
+  services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
     battery = {
       governor = "powersave";

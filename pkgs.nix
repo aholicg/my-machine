@@ -103,5 +103,11 @@
     pkgs.go
     pkgs.openvpn
     pkgs.openssh
+    pkgs.automake
+    pkgs.autoconf
+    pkgs.libtool
+    pkgs.gnum4
+    pkgs.jq
+    pkgs.dwarf2json
   ];
 }
