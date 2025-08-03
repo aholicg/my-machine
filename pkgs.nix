@@ -62,16 +62,15 @@
     pkgs.elf-info
     pkgs.foremost
     pkgs.ffmpeg
-    pkgs.audacity
     pkgs.id3v2
     pkgs.gdb
-    pkgs.ghex
     pkgs.sox
     pkgs.powertop
     pkgs.inspectrum
     pkgs.qsstv
     pkgs.csvkit
     pkgs.saleae-logic-2
+    pkgs.saleae-logic
     pkgs.pev
     pkgs.xortool
     pkgs.vimPlugins.clangd_extensions-nvim
@@ -92,9 +91,7 @@
     pkgs.tulip
     pkgs.nix-tree
     pkgs.desktop-file-utils
-    pkgs.mattermost
     pkgs.wineWowPackages.stagingFull
-    pkgs.gearlever
     pkgs.unrar
     pkgs.zathura
     pkgs.nbd
@@ -109,5 +106,18 @@
     pkgs.gnum4
     pkgs.jq
     pkgs.dwarf2json
+    pkgs.openssl
+    pkgs.jdk17
+    pkgs.sqlite
+    pkgs.mpack
+    pkgs.texliveSmall
+    pkgs.urh
+    pkgs.gcc-arm-embedded
+    pkgs.protonvpn-cli
+    pkgs.rtl_433
+    pkgs.rars
+    pkgs.ffuf
+    pkgs.vscodium
+    pkgs.socat
   ];
 }

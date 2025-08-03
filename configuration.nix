@@ -159,6 +159,7 @@
   security.pam.services.hyprlock = {};
   #services.hypridle.enable = true;
 
+  # environment
   environment.sessionVariables = {
   # electron apps to use wayland
   NIXOS_OZONE_WL = "1";
@@ -239,19 +240,19 @@
   powerManagement = {
     enable = true;
     powertop.enable = true;
-    cpuFreqGovernor = "schedutil";
+    cpuFreqGovernor = "powersave";
   };
   services.thermald.enable = true;
   services.power-profiles-daemon.enable = false;
 
   services.tlp = {
-    enable = false;
+    enable = true;
     settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
+      CPU_SCALING_GOVERNOR_ON_AC = "powersave";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "schedutil";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "power";
 
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
@@ -266,7 +267,7 @@
     };
   };
 
-  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.enable = false;
   services.auto-cpufreq.settings = {
     battery = {
       governor = "powersave";
