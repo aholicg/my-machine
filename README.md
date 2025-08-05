@@ -1,4 +1,4 @@
-mostly stolen from [loegaire](https://github.com/loegaire) XD
+probs to my inspiration-mentor [loegaire](https://github.com/loegaire) XD
 
 ![bilde](https://github.com/user-attachments/assets/2af6df18-faaf-4136-a68f-02eb9c6e3034)
 
