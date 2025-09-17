@@ -110,14 +110,20 @@
     pkgs.jdk17
     pkgs.sqlite
     pkgs.mpack
-    pkgs.texliveSmall
     pkgs.urh
-    pkgs.gcc-arm-embedded
     pkgs.protonvpn-cli
     pkgs.rtl_433
-    pkgs.rars
     pkgs.ffuf
-    pkgs.vscodium
     pkgs.socat
+    pkgs.qemu
+    pkgs.mindustry-wayland
+    pkgs.microsoft-edge
+    pkgs.vesktop
+    pkgs.javaPackages.openjfx17
+    pkgs.eww
+    pkgs.rars
+    pkgs.nodejs_22
+    pkgs.steam-run
+    pkgs.libreoffice
   ];
 }

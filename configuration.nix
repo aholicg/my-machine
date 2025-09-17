@@ -234,7 +234,10 @@
 
   # Unfree
   nixpkgs.config.allowUnfree = true;
-  #services.logmein-hamachi.enable = true;
+  services.logmein-hamachi.enable = true;
+
+  # Flatpak
+  services.flatpak.enable = true;
 
   # Power Management
   powerManagement = {
@@ -305,4 +308,16 @@
 
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
+  # networking
+  networking.firewall.checkReversePath = false;
+  environment.systemPackages = with pkgs; [wireguard-tools protonvpn-gui];
+
+  # garbage collector
+  nix.extraOptions = ''
+
+    keep-outputs = true
+    keep-derivations = true
+
+  '';
 }
