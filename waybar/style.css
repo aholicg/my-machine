@@ -2,36 +2,68 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, JetBrainsMono, Helvetica, Arial, sans-serif;
     font-size: 13px;
-    border-radius: 10px;
+    border-radius: 0px;
     /*border: 1px solid #05ff5d;*/
 }
+.modules-center button:hover{
+    background-color:#ffffff;
+    background-color: rgba(16,36,19,1.0);
+}
 .modules-left {
-    border-radius: 10px;
-    border: 1px solid #155D35;
-    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px 10px 10px 10px; 
+    border: 1px solid transparent;
+    background: linear-gradient(90deg,rgba(47, 79, 79, 1) 0%, rgba(0, 84, 29, 1) 51%, rgba(84, 52, 84, 1) 100%);
     margin-top: 1px;
     margin-left: 1px;
-    /*box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.6);*/
 }
 .modules-right {
-    border-radius: 10px;
+    border-radius: 0px 0px 8px 8px;
     border: 1px solid #155D35;
-    background-color: rgba(0,0,0,0.8);
+    background: linear-gradient(90deg,rgba(32, 54, 54, 1) 0%, rgba(0, 64, 22, 1) 51%, rgba(66, 30, 66, 1) 100%);
     margin-top: 1px;
-    margin-right: 1px
+    margin-right: 1px 
 }
 .modules-center {
-    border-radius: 10px;
+    border-radius: 0px 0px 8px 8px;
     border: 1px solid #155D35;
-    background-color: rgba(0,0,0,0.8);
+    background: linear-gradient(90deg,rgba(32, 54, 54, 1) 0%, rgba(0, 64, 22, 1) 51%, rgba(66, 30, 66, 1) 100%);
     margin-top: 1px;
 }
-window#waybar {
-    background-color: rgba(0, 0, 0, 0);
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+
+window#waybar.bar {
+    background-color: rgba(43, 48, 59, 0.0);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*window#waybar.tasks2 {
+    margin-left:1000px;
+    background-color:transparent;
+    color:#58db46;
+    font-size:25px;
+    border:2px solid transparent;
+    border-radius:10px;
+}
+
+window#waybar.tasks{
+    background-color: transparent;
+    color:#58db46;
+    font-size:30px;
+}*/
+
+window#waybar button:hover {
+    /*background-color: #111111;*/
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+   /*  background: inherit; */
+    /*box-shadow: inset 0 -3px #ffffff;*/
 }
 
 button {
@@ -42,10 +74,22 @@ button {
     border-radius: 10px;
 }
 
+#workspaces {
+    background-color: #1a3a1c;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid transparent;
+    /*box-shadow: 2px 2px 5px #164a17;*/
+}
+
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
     color: #ffffff;
+}
+
+#workspaces button:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius:10px;
 }
 
 #workspaces button.active {
@@ -54,12 +98,12 @@ button {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #f4ee3a;
     border-radius: 10px;
 }
 
 #mode {
-    background-color: #64727D;
+    background-color:#64727D;
     border-bottom: 3px solid #ffffff;
 }
 
@@ -83,14 +127,16 @@ button {
     color: #ffffff;
 }
 
-#window,
+#window {
+    color:#92fca4;
+}
 #workspaces {
-    margin: 0 4px;
+    margin: 0 4;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 1;
+    margin-left: 0;
     border-radius: 10px;
 }
 
@@ -101,14 +147,20 @@ button {
 
 #clock {
     color: #ff78dd;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #battery {
     color: #ff78dd;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #battery.charging, #battery.plugged {
     color: #73ffa4;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
     
 @keyframes blink {
@@ -126,6 +178,7 @@ button {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    border-radius: 0px 0px 8px 8px;
 }
 
 label:focus {
@@ -134,22 +187,38 @@ label:focus {
 
 #cpu {
     color :#73ffa4;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #memory {
     color : #ff78dd;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #disk {
     color : #ff78dd;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
+}
+
+#user{
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
+    font-size: 25px;
 }
 
 #backlight {
     color :#73ffa4;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #network {
-    color :#73ffa4
+    color :#73ffa4;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #network.disconnected {
@@ -158,23 +227,33 @@ label:focus {
 
 #pulseaudio {
     color : #ff78dd;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #pulseaudio.muted {
     color :#ff78dd;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #wireplumber {
     color :#73ffa4;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #wireplumber.muted {
     color :#73ffa4;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #custom-media {
     color: #2a5c45;
     min-width: 100px;
+    border: 3px solid #1f5124;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #custom-media.custom-spotify {
@@ -190,7 +269,8 @@ label:focus {
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    color:#111111;
+    background-color: #e57504;
 }
 
 #tray {
@@ -211,6 +291,7 @@ label:focus {
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
     color: #2d3436;
+    border-radius: 0px 0px 0px 8px;
 }
 
 #mpd {
@@ -242,4 +323,19 @@ label:focus {
 
 #scratchpad.empty {
 	background-color: transparent;
+}
+
+#keyboard-state {
+    color: #ff87f3;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
 }
