@@ -159,6 +159,9 @@
   security.pam.services.hyprlock = {};
   #services.hypridle.enable = true;
 
+  # niri
+  programs.niri.enable = true;
+
   # environment
   environment.sessionVariables = {
   # electron apps to use wayland

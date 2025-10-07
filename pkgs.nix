@@ -125,5 +125,10 @@
     pkgs.nodejs_22
     pkgs.steam-run
     pkgs.libreoffice
+    pkgs.obsidian
+    pkgs.nmap
+    pkgs.vscode
+    pkgs.blesh
+    pkgs.gimp
   ];
 }
