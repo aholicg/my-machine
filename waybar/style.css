@@ -17,14 +17,14 @@
     margin-left: 1px;
 }
 .modules-right {
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 10px 10px;
     border: 1px solid #155D35;
     background: linear-gradient(90deg,rgba(32, 54, 54, 1) 0%, rgba(0, 64, 22, 1) 51%, rgba(66, 30, 66, 1) 100%);
     margin-top: 1px;
     margin-right: 1px 
 }
 .modules-center {
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 10px 10px;
     border: 1px solid #155D35;
     background: linear-gradient(90deg,rgba(32, 54, 54, 1) 0%, rgba(0, 64, 22, 1) 51%, rgba(66, 30, 66, 1) 100%);
     margin-top: 1px;
