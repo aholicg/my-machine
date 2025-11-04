@@ -127,7 +127,6 @@
     pkgs.libreoffice
     pkgs.obsidian
     pkgs.nmap
-    pkgs.vscode
     pkgs.blesh
     pkgs.gimp
   ];
